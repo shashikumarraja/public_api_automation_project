@@ -1,7 +1,65 @@
 # Public API Automation Project
 
-Automates APIs available here-
+A Sample project creating the framework to automate APIs
+
+APIs used for automation are available here-
 https://alexwohlbruck.github.io/cat-facts/docs/endpoints/facts.html
+
+## Project Structure Overview
+
+```
+public_api_automation_project         # root dir
+├── README.MD                 
+├── Dockerfile                        # docker files to create container
+├── docker-compose.yaml
+├── requirements.txt                  # project requirement libraries are here
+├── .travis.yaml                      # travis configuration to run tests on public travis ci
+├── src
+    ├── conftest.py
+    ├── pytest.ini
+    ├── tests                          # This is where tests are written
+    │   └── test.py
+    └── utils                          # Helper utils are written here
+        ├── api_utils.py
+        ├── file_utils.py
+        ├── logger_utils.py
+```
+
+## Steps to run the project
+
+### 1. Using [`Docker`](https://docs.docker.com/docker-for-mac/install/):
+
+```sh
+# install docker first and then
+$ docker-compose up
+#check the containers
+$ docker ps
+```
+
+#### To run `tests`
+
+```sh
+docker exec -ti public_api_automation_project pytest src/tests/*.py
+```
+
+### 2. Without docker (in local machine)
+
+```sh
+# install python 3 first
+$ brew install python3
+$ cd public_api_automation_project
+$ pip install -r requirements.txt
+$ export PYTHONPATH="$PYTHONPATH:/public_api_automation_project/"
+```
+
+#### To run `tests` locally
+
+```sh
+$ pytest src/tests/*.py  
+
+# with html report file
+pytest src/tests/*.py --html=report.html --self-contained-html
+```
 
 ## Test Cases
 

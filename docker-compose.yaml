@@ -1,0 +1,12 @@
+version: '3.5'
+services:
+  public_api_automation_project:
+    container_name: public_api_automation_project
+    build: .
+    ports:
+      - "8089:8089"
+    volumes:
+      - .:/public_api_automation_project/
+    environment:
+      - PYTHONPATH=/public_api_automation_project/
+    tty: true

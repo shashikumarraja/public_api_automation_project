@@ -1,3 +1,4 @@
-requests
-pytest
+requests==2.23.0
+pytest>=4.0.2
 urllib3==1.22
+faker

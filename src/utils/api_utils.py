@@ -4,8 +4,7 @@ Utils to support api calls
 import json
 import logging
 import os
-from urlparse import urlparse, parse_qsl, urlunparse
-from urllib import urlencode
+from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 
 import requests
 from src.utils.logger_utils import CustomLogger

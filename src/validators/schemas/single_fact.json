@@ -1,0 +1,182 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "used": false,
+            "source": "api",
+            "type": "cat",
+            "deleted": false,
+            "_id": "591f98803b90f7150a19c1ed",
+            "__v": 0,
+            "text": "Kittens who are taken along on short, trouble-free car trips to town tend to make good passengers when they get older. They get used to the sounds and motions of traveling and make less connection between the car and the visits to the vet.",
+            "updatedAt": "2020-08-23T20:20:01.611Z",
+            "createdAt": "2018-01-04T01:10:54.673Z",
+            "status": {
+                "verified": true,
+                "sentCount": 1
+            },
+            "user": "5a9ac18c7478810ea6c06381"
+        }
+    ],
+    "required": [
+        "used",
+        "source",
+        "type",
+        "deleted",
+        "_id",
+        "__v",
+        "text",
+        "updatedAt",
+        "createdAt",
+        "status",
+        "user"
+    ],
+    "properties": {
+        "used": {
+            "$id": "#/properties/used",
+            "type": "boolean",
+            "title": "The used schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                false
+            ]
+        },
+        "source": {
+            "$id": "#/properties/source",
+            "type": "string",
+            "title": "The source schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "api"
+            ]
+        },
+        "type": {
+            "$id": "#/properties/type",
+            "type": "string",
+            "title": "The type schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "cat"
+            ]
+        },
+        "deleted": {
+            "$id": "#/properties/deleted",
+            "type": "boolean",
+            "title": "The deleted schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                false
+            ]
+        },
+        "_id": {
+            "$id": "#/properties/_id",
+            "type": "string",
+            "title": "The _id schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "591f98803b90f7150a19c1ed"
+            ]
+        },
+        "__v": {
+            "$id": "#/properties/__v",
+            "type": "integer",
+            "title": "The __v schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                0
+            ]
+        },
+        "text": {
+            "$id": "#/properties/text",
+            "type": "string",
+            "title": "The text schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Kittens who are taken along on short, trouble-free car trips to town tend to make good passengers when they get older. They get used to the sounds and motions of traveling and make less connection between the car and the visits to the vet."
+            ]
+        },
+        "updatedAt": {
+            "$id": "#/properties/updatedAt",
+            "type": "string",
+            "title": "The updatedAt schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "2020-08-23T20:20:01.611Z"
+            ]
+        },
+        "createdAt": {
+            "$id": "#/properties/createdAt",
+            "type": "string",
+            "title": "The createdAt schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "2018-01-04T01:10:54.673Z"
+            ]
+        },
+        "status": {
+            "$id": "#/properties/status",
+            "type": "object",
+            "title": "The status schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "verified": true,
+                    "sentCount": 1
+                }
+            ],
+            "required": [
+                "verified",
+                "sentCount"
+            ],
+            "properties": {
+                "verified": {
+                    "$id": "#/properties/status/properties/verified",
+                    "type": "boolean",
+                    "title": "The verified schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                        true
+                    ]
+                },
+                "sentCount": {
+                    "$id": "#/properties/status/properties/sentCount",
+                    "type": "integer",
+                    "title": "The sentCount schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                }
+            },
+            "additionalProperties": true
+        },
+        "user": {
+            "$id": "#/properties/user",
+            "type": "string",
+            "title": "The user schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "5a9ac18c7478810ea6c06381"
+            ]
+        }
+    },
+    "additionalProperties": true
+}

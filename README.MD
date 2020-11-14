@@ -1,6 +1,8 @@
 # Public API Automation Project
 
-A Sample project creating the framework to automate APIs
+[![Build Status](https://travis-ci.org/shashikumarraja/public_api_automation_project.svg?branch=master)](https://travis-ci.org/shashikumarraja/public_api_automation_project)
+
+A Sample project creating a basic pytest based framework to automate APIs
 
 APIs used for automation are available here-
 https://alexwohlbruck.github.io/cat-facts/docs/endpoints/facts.html
@@ -19,6 +21,9 @@ public_api_automation_project         # root dir
     ├── pytest.ini
     ├── tests                          # This is where tests are written
     │   └── test.py
+    ├── validators                     # Helper test validation methods
+        └── schemas                    # json schemas to compare the response with
+        └── validators.py
     └── utils                          # Helper utils are written here
         ├── api_utils.py
         ├── file_utils.py
@@ -79,5 +84,12 @@ pytest src/tests/*.py --html=report.html --self-contained-html
 |                  | 5    | Verify with non-existent/invalid animal type                                              | 1. valid path2. Invalid animal_type                                        | GET https://cat-fact.herokuapp.com/facts/random?animal_type=random_string                                                                                                                                                    | 1. Should return status code 200 2. Should return empty response                                                                                                                                                      |
 |                  | 6    | Verify path with invalid headers                                                          | 1. valid path2. invalid header                                             | GET https://cat-fact.herokuapp.com/facts                                                                                                                                                                                     | 1. Should return status code 400 Bad Request                                                                                                                                                                          |
 |                  |      |                                                                                           |                                                                            |                                                                                                                                                                                                                              |                                                                                                                                                                                                                       |
-| Load/Performance | 1    | Verify path "/facts" is reachable and serving request for n user requests simulataneously | 1. Resource to simulate n user request2. Valid path                        | GET https://cat-fact.herokuapp.com/facts                                                                                                                                                                                     | 1. Should return status code 200 for all requests 2. The response time should be within acceptable limits   
-                                                                                                          |
+| Load/Performance | 1    | Verify path "/facts" is reachable and serving request for n user requests simulataneously | 1. Resource to simulate n user request2. Valid path                        | GET https://cat-fact.herokuapp.com/facts                                                                                                                                                                                     | 1. Should return status code 200 for all requests 2. The response time should be within acceptable limits|
+
+## To do
+
+1. Automate all test cases written above
+2. Implement more testing strategies like hypothesis test to get better coverage
+3. Refactor the code
+4. Integrate more reports for better test result analysis
+   

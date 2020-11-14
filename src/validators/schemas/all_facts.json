@@ -1,0 +1,221 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "All facts schema",
+    "description": "All facts schema",
+    "default": {},
+    "examples": [
+        {
+            "all": [
+                {
+                    "_id": "591d9b2f227c1a0020d26823",
+                    "text": "Every year, nearly four million cats are eaten in China as a delicacy.",
+                    "type": "cat",
+                    "user": {
+                        "_id": "5a9ac18c7478810ea6c06381",
+                        "name": {
+                            "first": "Alex",
+                            "last": "Wohlbruck"
+                        }
+                    },
+                    "upvotes": 12,
+                    "userUpvoted": null
+                }
+            ]
+        }
+    ],
+    "required": [
+        "all"
+    ],
+    "properties": {
+        "all": {
+            "$id": "#/properties/all",
+            "type": "array",
+            "title": "The all schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "examples": [
+                [
+                    {
+                        "_id": "591d9b2f227c1a0020d26823",
+                        "text": "Every year, nearly four million cats are eaten in China as a delicacy.",
+                        "type": "cat",
+                        "user": {
+                            "_id": "5a9ac18c7478810ea6c06381",
+                            "name": {
+                                "first": "Alex",
+                                "last": "Wohlbruck"
+                            }
+                        },
+                        "upvotes": 12,
+                        "userUpvoted": null
+                    }
+                ]
+            ],
+            "additionalItems": true,
+            "items": {
+                "$id": "#/properties/all/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/all/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "_id": "591d9b2f227c1a0020d26823",
+                                "text": "Every year, nearly four million cats are eaten in China as a delicacy.",
+                                "type": "cat",
+                                "user": {
+                                    "_id": "5a9ac18c7478810ea6c06381",
+                                    "name": {
+                                        "first": "Alex",
+                                        "last": "Wohlbruck"
+                                    }
+                                },
+                                "upvotes": 12,
+                                "userUpvoted": null
+                            }
+                        ],
+                        "required": [
+                            "_id",
+                            "text",
+                            "type",
+                            "upvotes",
+                            "userUpvoted"
+                        ],
+                        "properties": {
+                            "_id": {
+                                "$id": "#/properties/all/items/anyOf/0/properties/_id",
+                                "type": "string",
+                                "title": "The _id schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "591d9b2f227c1a0020d26823"
+                                ]
+                            },
+                            "text": {
+                                "$id": "#/properties/all/items/anyOf/0/properties/text",
+                                "type": "string",
+                                "title": "The text schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Every year, nearly four million cats are eaten in China as a delicacy."
+                                ]
+                            },
+                            "type": {
+                                "$id": "#/properties/all/items/anyOf/0/properties/type",
+                                "type": "string",
+                                "title": "The type schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "cat"
+                                ]
+                            },
+                            "user": {
+                                "$id": "#/properties/all/items/anyOf/0/properties/user",
+                                "type": "object",
+                                "title": "The user schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": {},
+                                "examples": [
+                                    {
+                                        "_id": "5a9ac18c7478810ea6c06381",
+                                        "name": {
+                                            "first": "Alex",
+                                            "last": "Wohlbruck"
+                                        }
+                                    }
+                                ],
+                                "required": [
+                                    "_id",
+                                    "name"
+                                ],
+                                "properties": {
+                                    "_id": {
+                                        "$id": "#/properties/all/items/anyOf/0/properties/user/properties/_id",
+                                        "type": "string",
+                                        "title": "The _id schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": "",
+                                        "examples": [
+                                            "5a9ac18c7478810ea6c06381"
+                                        ]
+                                    },
+                                    "name": {
+                                        "$id": "#/properties/all/items/anyOf/0/properties/user/properties/name",
+                                        "type": "object",
+                                        "title": "The name schema",
+                                        "description": "An explanation about the purpose of this instance.",
+                                        "default": {},
+                                        "examples": [
+                                            {
+                                                "first": "Alex",
+                                                "last": "Wohlbruck"
+                                            }
+                                        ],
+                                        "required": [
+                                            "first",
+                                            "last"
+                                        ],
+                                        "properties": {
+                                            "first": {
+                                                "$id": "#/properties/all/items/anyOf/0/properties/user/properties/name/properties/first",
+                                                "type": "string",
+                                                "title": "The first schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "Alex"
+                                                ]
+                                            },
+                                            "last": {
+                                                "$id": "#/properties/all/items/anyOf/0/properties/user/properties/name/properties/last",
+                                                "type": "string",
+                                                "title": "The last schema",
+                                                "description": "An explanation about the purpose of this instance.",
+                                                "default": "",
+                                                "examples": [
+                                                    "Wohlbruck"
+                                                ]
+                                            }
+                                        },
+                                        "additionalProperties": true
+                                    }
+                                },
+                                "additionalProperties": true
+                            },
+                            "upvotes": {
+                                "$id": "#/properties/all/items/anyOf/0/properties/upvotes",
+                                "type": "integer",
+                                "title": "The upvotes schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    12
+                                ]
+                            },
+                            "userUpvoted": {
+                                "$id": "#/properties/all/items/anyOf/0/properties/userUpvoted",
+                                "type": "null",
+                                "title": "The userUpvoted schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": null,
+                                "examples": [
+                                    null
+                                ]
+                            }
+                        },
+                        "additionalProperties": true
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": true
+}

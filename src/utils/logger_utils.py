@@ -18,15 +18,14 @@ class CustomLogger(ABC):
         if CustomLogger.__logger is not None:
             return CustomLogger.__logger
 
-        #logs dir to be created under the project dir
+        # logs dir to be created under the project dir
         logs_path = global_logs_dir
 
         # Create log directory if it does not exist
         if not os.path.exists(logs_path):
             os.mkdir(logs_path)
 
-        # Let's create a root logger now and clear any old handlers if already
-        # available
+        # Create a root logger and clear any old handlers
         logger = logging.getLogger(name)
         logger.setLevel(logging.DEBUG)
 
@@ -38,17 +37,17 @@ class CustomLogger(ABC):
         format_pattern = '%(asctime)s:%(levelname)s:%(filename)s:%(lineno)d:%(message)s'
         formatter = logging.Formatter(format_pattern)
 
-        # Set INFO or above log handler
+        # Set INFO log handler
         info_handler = logging.FileHandler('{0}/info.log'.format(logs_path))
         info_handler.setLevel(logging.INFO)
         info_handler.setFormatter(formatter)
 
-        # Set DEBUG or above log handler
+        # Set DEBUG log handler
         debug_handler = logging.FileHandler('{0}/debug.log'.format(logs_path))
         debug_handler.setLevel(logging.DEBUG)
         debug_handler.setFormatter(formatter)
 
-        # Set ERROR or above log handler
+        # Set ERROR log handler
         error_handler = logging.FileHandler('{0}/error.log'.format(logs_path))
         error_handler.setLevel(logging.ERROR)
         error_handler.setFormatter(formatter)
@@ -63,7 +62,7 @@ class CustomLogger(ABC):
         logger.addHandler(error_handler)
         logger.addHandler(console_handler)
 
-        # Disable verbosity for the unecessary loggers
+        # Disable verbosity for other loggers
         urllib3_logger = logging.getLogger('urllib3')
         urllib3_logger.setLevel(logging.ERROR)
 

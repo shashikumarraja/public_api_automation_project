@@ -61,10 +61,7 @@
                     "_id",
                     "user",
                     "text",
-                    "createdAt",
-                    "updatedAt",
-                    "__v",
-                    "status"
+                    "updatedAt"
                 ],
                 "properties": {
                     "used": {

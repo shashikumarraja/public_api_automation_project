@@ -46,6 +46,19 @@ $ docker ps
 ```sh
 docker exec -ti public_api_automation_project pytest src/tests/*.py
 ```
+Should give test result output like this-
+```
+=============================================================== test session starts ================================================================
+platform linux -- Python 3.8.2, pytest-6.1.2, py-1.9.0, pluggy-0.13.1 -- /usr/local/bin/python
+cachedir: .pytest_cache
+rootdir: /public_api_automation_project/src, configfile: pytest.ini
+plugins: Faker-4.14.2
+collected 3 items
+
+src/tests/test.py::TestCatFact::test_get_all_facts PASSED                                                                                    [ 33%]
+src/tests/test.py::TestCatFact::test_get_random_fact PASSED                                                                                  [ 66%]
+src/tests/test.py::TestCatFact::test_get_random_fact_with_valid_query_params PASSED                                                          [100%]
+```
 
 ### 2. Without docker (in local machine)
 

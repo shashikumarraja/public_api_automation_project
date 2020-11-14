@@ -1,5 +1,6 @@
 """Util to generate test data
 """
+import random
 from faker import Faker
 from src.utils.logger_utils import CustomLogger
 
@@ -42,3 +43,10 @@ class DataUtils():
 
     def get_single_fact_schema(self):
         return "single_fact.json"
+
+    def get_all_valid_animal_types(self):
+        return ["cat", "dog", "deer"]
+
+    def get_random_valid_animal_type(self):
+        valid_animals = self.get_all_valid_animal_types()
+        return random.choice(valid_animals)

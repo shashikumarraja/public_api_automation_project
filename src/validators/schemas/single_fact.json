@@ -29,11 +29,9 @@
         "type",
         "deleted",
         "_id",
-        "__v",
         "text",
         "updatedAt",
         "createdAt",
-        "status",
         "user"
     ],
     "properties": {
